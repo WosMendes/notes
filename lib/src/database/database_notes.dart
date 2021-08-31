@@ -9,7 +9,7 @@ class DatabaseNotes {
 
   Future<Database> getDatabase() async {
     final String dbPath = await getDatabasesPath();
-    final String path = join(dbPath, 'note_app_3.db');
+    final String path = join(dbPath, 'note_app.db');
     return openDatabase(path, onCreate: (db, version) {
       db.execute('''
           CREATE TABLE notes(
